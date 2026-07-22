@@ -13,6 +13,12 @@ To build a Multiple Linear Regression model to accurately estimate and predict m
 *   matplotlib
 *   seaborn
 
+## Methodology
+1.  **Data Understanding:** Inspected data features. Identified numerical columns (`age`, `bmi`, `children`), categorical elements (`sex`, `smoker`, `region`), and the target variable (`charges`).
+2.  **Preprocessing:** Verified zero missing values across columns. Transformed categorical variables using One-Hot Encoding (`pd.get_dummies`) with `drop_first=True` to eliminate multi-collinearity issues (dummy variable trap).
+3.  **Data Splitting:** Divided data dynamically into an 80% training set and a 20% test set to evaluate real-world generalizability.
+4.  **Modeling:** Fitted a Multiple Linear Regression line targeting the minimized sum of squared residuals.
+5.  **Evaluation:** Documented performance via MAE, MSE, and R² scores alongside residual visualization graphs.
 ## Results
 *   **Mean Absolute Error (MAE):** ~$4,181.19
 *   **Root Mean Squared Error (RMSE):** ~$5,796.28
